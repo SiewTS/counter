@@ -22,50 +22,47 @@ let value = document.getElementById("value");
 //     value.innerHTML = count;
 // });
 
-
 // One Event Listener Method
-const btns = document.querySelectorAll(".btn");
+const btns = document.querySelectorAll(".btn-container__btn");
 
-btns.forEach(function(btn){
-    btn.addEventListener("click", function(e){
-        const styles = e.currentTarget.getAttribute('id');
+btns.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+        const styles = e.currentTarget.getAttribute("id");
         // console.log(e.currentTarget.attributes);
-       
-        if(styles === "decrease"){
+
+        if (styles === "decrease") {
             // setting byvalue as global variable doesn't work
             let byvalue = Number(document.getElementById("dein-input").value);
-            if(byvalue != ""){
+            if (byvalue != "") {
                 count -= byvalue;
                 console.log(count);
-                console.log(typeof(count));
-            }else{
+                console.log(typeof count);
+            } else {
                 count--;
             }
-        }
-        else if(styles === "increase"){
+        } else if (styles === "increase") {
             // addition won't sum without have Number conversion
             // the value got from input is of type number but the value is different
             // rather than giving 6 while sum, it gives 06, why?
             let byvalue = Number(document.getElementById("dein-input").value);
-            if(byvalue != ""){
+            if (byvalue != "") {
                 count += byvalue;
                 console.log(count);
                 console.log(document.getElementById("dein-input").type);
-            }else{
+            } else {
                 count++;
             }
-        }
-        else{
+        } else {
             count = 0;
         }
         // Set color on value
-        if(count < 0){
+        if (count < 0) {
             value.style.color = "#ff0000";
         }
-        if(count > 0){
+        if (count > 0) {
             value.style.color = "#00ff00";
         }
-        if(count == 0){
+        if (count == 0) {
             value.style.color = "#4b4b4b";
         }
         value.innerText = count;
@@ -74,7 +71,6 @@ btns.forEach(function(btn){
 
 // Reset input value when page refresh
 window.onload = resetValue();
-function resetValue(){
+function resetValue() {
     document.getElementById("dein-input").value = "";
 }
-

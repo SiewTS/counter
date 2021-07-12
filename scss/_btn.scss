@@ -1,0 +1,15 @@
+@use './colors';
+
+@mixin btn($bg, $txt) {
+    width: 120px;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: $bg;
+    color: $txt;
+    border: 2px solid $txt;
+    border-radius: 5px;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 2ms ease-in-out 0.5ms;
+}
