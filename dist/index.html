@@ -5,34 +5,57 @@
     References : john-smilga/javascript-basic-projects (GitHub)
 -->
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Counter</title>
         <!-- CSS -->
-        <link rel="stylesheet" href="./css/style.min.css">
+        <link rel="stylesheet" href="./css/style.min.css" />
     </head>
     <body>
         <!-- main section -->
         <main>
             <!-- counter container -->
             <div class="container">
-                <h1>Counter</h1>
+                <h1 class="container__title">Counter</h1>
                 <!-- value -->
-                <span id="value">0</span>
+                <span class="container__value" id="value">0</span>
                 <!-- btn container -->
-                <div class="button-container">
+                <div class="btn-container">
                     <!-- buttons -->
-                    <button class="btn" id="decrease">decrease</button>
-                    <button class="btn" id="reset">reset</button>
-                    <button class="btn" id="increase">increase</button>
+                    <button
+                        class="btn-container__btn btn-container__btn--decrease"
+                        id="decrease"
+                    >
+                        decrease
+                    </button>
+                    <button
+                        class="btn-container__btn btn-container__btn--reset"
+                        id="reset"
+                    >
+                        reset
+                    </button>
+                    <button
+                        class="btn-container__btn btn-container__btn--increase"
+                        id="increase"
+                    >
+                        increase
+                    </button>
                 </div>
-                <div id="by-value">
+                <div class="input-container" id="by-value">
                     <!-- <form action=""> -->
-                        <label for="dein-input">by</label>
-                        <input type="number" name="dein-input" id="dein-input" placeholder="Enter a number">
+                    <label class="input-container__label" for="dein-input"
+                        >by</label
+                    >
+                    <input
+                        type="number"
+                        name="dein-input"
+                        class="input-container__field"
+                        id="dein-input"
+                        placeholder="Enter a number"
+                    />
                     <!-- </form> -->
                 </div>
             </div>
